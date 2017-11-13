@@ -4,6 +4,8 @@ header {
   width: 100%;
   background: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
+  z-index: 9;
   .header-cont {
     height: 100px;
     display: flex;
@@ -41,9 +43,15 @@ header {
     padding-left: 10px;
     margin-left: 31px;
   }
-  .nav {
+  nav {
     position: relative;
     top: -4px;
+    a {
+      margin-left: 22px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
   .flag {
     width: 14px;
