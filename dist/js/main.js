@@ -82,4 +82,17 @@ $(document).ready(function () {
         dots: true,
         arrows: false
     });
+
+    $(".one-char:not(.active)").find(".char-list").slideUp();
+    $(".js-btn-char").click(function(){
+        var sib = $(this).closest(".one-char").siblings();
+        var parent = $(this).closest(".one-char");
+        sib.removeClass("active");
+        sib.find(".js-btn-char").removeClass("active");
+        sib.find(".char-list").slideUp();
+
+        parent.find(".char-list").slideDown();
+        parent.addClass("active");
+        $(this).addClass("active");
+    });
 });
