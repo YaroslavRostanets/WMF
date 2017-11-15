@@ -387,7 +387,35 @@
     .for {
       height: 93px;
       background: #373D5B;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 18px;
+      color: #FFFFFF;
     }
+    .descr {
+      height: 70px;
+      background: #EFBF71;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7px 0 18px;
+      font-size: 24px;
+      color: #04082e;
+    }
+    .more {
+      color: #04082E;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .hider {
+      display: none;
+    }
+  }
+  .list {
+    margin-bottom: 75px;
   }
 }
 footer {
