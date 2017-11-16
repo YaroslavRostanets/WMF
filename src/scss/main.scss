@@ -1,6 +1,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+a {
+  &:hover,&:focus,&:active {
+    text-decoration: none;
+  }
+}
+
 .home-slider {
   font-family: 'Open Sans', sans-serif;
   .one-slide {
@@ -376,10 +382,19 @@ body {
   }
   .one-eq {
     box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.4);
+    &.active {
+      .more {
+        display: none;
+      }
+      .hider {
+        display: block;
+      }
+    }
     .img-cont {
       height: 390px;
       background: #EEFAFC;
       padding: 15px 0 10px 0;
+      position: relative;
       img {
         display: block;
         margin-right: auto;
@@ -408,18 +423,60 @@ body {
       font-size: 24px;
       color: #04082e;
     }
-    .more {
+    .more, .hider {
       color: #04082E;
       width: 20px;
       display: flex;
       justify-content: center;
+      &:hover {
+        text-decoration: none;
+      }
     }
     .hider {
       display: none;
     }
+    .active-text {
+      background: rgba(4,8,46,0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      font-family: "Open Sans";
+      color: #FFFFFF;
+      align-items: center;
+      padding: 0 10px;
+      display: none;
+      & > div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .list {
     margin-bottom: 75px;
+  }
+  .exhortation {
+    h3 {
+      font-size: 36px;
+      color: #04082e;
+      font-weight: 500;
+      font-family: "Open Sans";
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+    .arrow {
+      text-align: center;
+    }
+    .fa-angle-double-down {
+      color: #FFC06C;
+      font-size: 95px;
+    }
   }
 }
 .contact {
@@ -475,6 +532,111 @@ body {
       color: #FFC16D;
       font-size: 56px;
     }
+  }
+}
+.js-feedback-open {
+  background: #04082E;
+  width: 89px;
+  height: 89px;
+  position: fixed;
+  top: 120px;
+  right: 40px;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25);
+  .close-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/close.png");
+    background-position: center;
+    background-size: contain;
+    display: none;
+  }
+  &.mod-open {
+    .fa-phone {
+      display: none;
+    }
+    .close-btn {
+      display: block;
+    }
+  }
+  .fa-phone {
+    font-size: 50px;
+    color: #FFC16D;
+  }
+}
+input::-webkit-input-placeholder {
+  color: #04082e;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+}
+.thanks-modal, .feedback-modal {
+  width: 285px;
+  height: 175px;
+  background: #FFFFFF;
+  padding: 15px 15px 22px 15px;
+  position: absolute;
+  right: calc( 100% - 25px );
+  top: calc( 100% - 15px );
+  box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.4);
+  h4 {
+    text-align: center;
+    margin: 8px 0 24px 0;
+    color: #eebd6b;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .text {
+    color: #04082e;
+    font-size: 18px;
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Open Sans";
+    font-weight: 300;
+  }
+  .form-group {
+    margin-bottom: 24px;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid #04082E;
+    display: block;
+    width: 100%;
+    height: 30px;
+    &:-moz-placeholder,
+    &::-webkit-input-placeholder {
+      color: #04082e;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "Open Sans";
+    }
+    &:placeholder {
+      color: #04082e;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "Open Sans";
+    }
+  }
+  .submit {
+    background: #04082E;
+    font-size: 14px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #eebd6b;
+    height: 26px;
+    width: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.3);
+  }
+  object {
+    margin-top: -5px;
   }
 }
 footer {

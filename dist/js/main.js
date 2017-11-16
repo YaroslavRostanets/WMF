@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    var menuState = false;
     /*--Определение двайса--*/
     var state = {
         _device: "",
@@ -112,6 +112,78 @@ $(document).ready(function () {
         var parent = $(this).closest(".actual-block");
         parent.find(".active-text").fadeOut();
         parent.removeClass("active");
+    });
+
+    $(".one-eq .more").click(function(){
+       var parent = $(this).closest(".one-eq");
+        parent.addClass("active");
+       parent.find(".active-text").fadeIn();
+    });
+
+    $(".one-eq .hider").click(function(){
+        var parent = $(this).closest(".one-eq");
+        parent.removeClass("active");
+        parent.find(".active-text").fadeOut();
+    });
+
+    $(".js-feedback-open").click(function(){
+
+        if(menuState){
+            $(".feedback-modal").fadeOut();
+            $(".thanks-modal").fadeOut();
+            $(this).removeClass("mod-open");
+            menuState = false;
+            return false;
+        } else {
+            var _ = $(this).addClass("mod-open");
+            menuState = true;
+            $(".feedback-modal").fadeIn();
+
+            jQuery(function($){
+                $(document).mouseup(function (e){
+                    var div = $(".feedback-modal");
+                    if (!div.is(e.target)
+                        && div.has(e.target).length === 0) {
+                        div.fadeOut();
+                        _.removeClass("mod-open");
+                    }
+                });
+            });
+
+        }
+
+    });
+
+    $(".js-feedback-open .submit").click(function () {
+        $(".feedback-modal").fadeOut();
+        $(".thanks-modal").fadeIn();
+
+        jQuery(function($){
+            $(document).mouseup(function (e){
+                var div = $(".thanks-modal");
+                if (!div.is(e.target)
+                    && div.has(e.target).length === 0) {
+                    div.fadeOut();
+                }
+            });
+        });
+    });
+
+    $(window).on("scroll",function(){
+        console.log($(window).scrollTop());
+        if($(window).scrollTop() > 100 && $(window).scrollTop() < 150){
+            $("header").addClass("pre-fixed");
+        } else if ($(window).scrollTop() > 150) {
+            $("header").removeClass("pre-fixed").addClass("fixed");
+            $("body").css({
+                "padding-top": "100px"
+            });
+        } else {
+            $("header").removeClass("fixed pre-fixed");
+            $("body").css({
+                "padding-top": "0"
+            });
+        }
     });
 
 });

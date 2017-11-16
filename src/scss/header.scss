@@ -6,6 +6,19 @@ header {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   z-index: 9;
+  transition: all 0.2s ease;
+  &.pre-fixed {
+    position: fixed;
+    top: -100px;
+    left: 0;
+  }
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
   .header-cont {
     height: 100px;
     display: flex;
