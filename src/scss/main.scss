@@ -1,5 +1,8 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 .home-slider {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   .one-slide {
     height: 840px;
     background-image: url("../img/slider-bg.jpg");
@@ -360,8 +363,9 @@
   }
 }
 .optional-equipment {
+  padding-top: 32px;
   h3 {
-    margin: 0;
+    margin: 0 0 40px 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
@@ -375,7 +379,7 @@
     .img-cont {
       height: 390px;
       background: #EEFAFC;
-      padding: 10px 0;
+      padding: 15px 0 10px 0;
       img {
         display: block;
         margin-right: auto;
@@ -416,6 +420,61 @@
   }
   .list {
     margin-bottom: 75px;
+  }
+}
+.contact {
+  height: 558px;
+  background-image: url("../img/contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 36px;
+  color: #FFFFFF;
+  padding-top: 70px;
+  h3 {
+    color: #efbf71;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 46px 0;
+    font-size: 36px;
+  }
+  .pre-text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 31px;
+    margin-bottom: 54px;
+  }
+  .phone {
+    text-align: center;
+    margin-bottom: 39px;
+    .fa {
+      color: #FFC16D;
+      font-size: 60px;
+      position: relative;
+      top: 10px;
+    }
+  }
+  .mail {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+    .fa {
+      color: #FFC16D;
+      font-size: 40px;
+    }
+  }
+  .adress {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 300;
+    .fa {
+      color: #FFC16D;
+      font-size: 56px;
+    }
   }
 }
 footer {
