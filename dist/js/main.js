@@ -170,7 +170,6 @@ $(document).ready(function () {
     });
 
     $(window).on("scroll",function(){
-        console.log($(window).scrollTop());
         if($(window).scrollTop() > 100 && $(window).scrollTop() < 150){
             $("header").addClass("pre-fixed");
         } else if ($(window).scrollTop() > 150) {
@@ -185,5 +184,42 @@ $(document).ready(function () {
             });
         }
     });
+
+    $(".menu-btn").click(function(){
+       $(".menu-cont-wrap").fadeIn();
+    });
+
+    $(".js-close-menu").click(function(){
+        $(".menu-cont-wrap").fadeOut();
+    });
+
+    (function(){
+        var replaceURL = {
+            "wmf-1100s":"wmf-1100s",
+            "wmf-1500s":"wmf-1500s",
+            "wmf-5000s":"wmf-5000s",
+            "wmf-9000s":"wmf-9000s",
+            "wmf-espresso":"wmf-espresso",
+            "contact":"contact"
+        };
+
+        var blocks = $(".link-block");
+
+        $(window).on("scroll",function(){
+            blocks.each(function(i,item){
+                var elTop = $(item).offset().top;
+                var min = $(window).scrollTop();
+                var max = $(window).scrollTop() + $(window).height();
+                if( elTop > min && elTop < max ){
+                    console.log($(this).attr("id"));
+                    history.pushState({foo: 'bar'}, 'Title', "/"+$(this).attr("id"));
+                    //$(item).css({"background":"red"});
+                }
+            });
+        });
+
+
+
+    })();
 
 });

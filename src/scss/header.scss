@@ -115,5 +115,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 100%;
   }
+}
+.menu-btn {
+  display: none;
+}
+.js-close-menu {
+  font-size: 23px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: none;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,53 +22,61 @@
                         <a href="#" class="logo-cont">
                             <img src="dist/img/logo.png" alt="">
                         </a>
-                        <div class="menu-cont">
-                            <div class="top-cont">
-                                <a href="" class="tel">
-                                    <span class="glyphicon glyphicon-earphone"></span>
-                                    +38(044) 564-75-89
+                        <div class="menu-cont-wrap">
+                            <div class="menu-cont">
+                                <a href="javascript:void(0);" class="js-close-menu">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
                                 </a>
-                                <a href="#" class="mail">
-                                    <span class="glyphicon glyphicon-envelope"></span>
-                                    wmf-ukraine@com.ua
-                                </a>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                <div class="top-cont">
+                                    <a href="" class="tel">
+                                        <span class="glyphicon glyphicon-earphone"></span>
+                                        +38(044) 564-75-89
+                                    </a>
+                                    <a href="#" class="mail">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                        wmf-ukraine@com.ua
+                                    </a>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
                                         <span class="flag">
                                             <img src="dist/img/ru.png" alt="">
                                         </span>
-                                        RU
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">
+                                            RU
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">
                                                 <span class="flag">
                                                     <img src="dist/img/en.png" alt="">
                                                 </span>
-                                                EN
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
+                                                    EN
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
                                                 <span class="flag">
                                                     <img src="dist/img/ua.jpg" alt="">
                                                 </span>
-                                                UK
-                                            </a>
-                                        </li>
-                                    </ul>
+                                                    UK
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <nav>
+                                    <a href="#wmf-1100s">1100 S</a>
+                                    <a href="#wmf-1500s">1500 S</a>
+                                    <a href="#wmf-5000s">5000 S</a>
+                                    <a href="#wmf-9000s">9000+ S</a>
+                                    <a href="#wmf-espresso">WMF Espresso</a>
+                                    <a href="#contact">Связаться с нами</a>
+                                </nav>
                             </div>
-                            <nav>
-                                <a href="#">1100 S</a>
-                                <a href="#">1500 S</a>
-                                <a href="#">5000 S</a>
-                                <a href="#">9000+ S</a>
-                                <a href="#">WMF Espresso</a>
-                                <a href="#">Связаться с нами</a>
-                            </nav>
                         </div>
+                        <a href="javascript:void(0);" class="menu-btn">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -116,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="coffe-maker blue">
+        <section class="coffe-maker blue link-block" id="wmf-1100s" >
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -224,7 +233,7 @@
             </div>
         </section>
 
-        <section class="coffe-maker">
+        <section class="coffe-maker link-block" id="wmf-1500s">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -334,7 +343,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <h3>Для кого <span>актуально</span></h3>
-                        <div class="col-md-6 actual-block">
+                        <div class="col-sm-6 col-md-6 actual-block">
                             <div class="actual-block-in">
                                 <div class="img-cont">
                                     <img src="dist/img/a1.jpg" alt="">
@@ -361,7 +370,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 actual-block">
+                        <div class="col-sm-6 col-md-6 actual-block">
                             <div class="actual-block-in">
                                 <div class="img-cont">
                                     <img src="dist/img/a2.jpg" alt="">
@@ -388,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 actual-block">
+                        <div class="col-sm-6 col-md-6 actual-block">
                             <div class="actual-block-in">
                                 <div class="img-cont">
                                     <img src="dist/img/a3.jpg" alt="">
@@ -415,7 +424,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 actual-block">
+                        <div class="col-sm-6 col-md-6 actual-block">
                             <div class="actual-block-in">
                                 <div class="img-cont">
                                     <img src="dist/img/a4.jpg" alt="">
@@ -447,7 +456,7 @@
             </div>
         </section>
 
-        <section class="coffe-maker">
+        <section class="coffe-maker link-block" id="wmf-5000s">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -573,7 +582,7 @@
             </div>
         </section>
 
-        <section class="coffe-maker">
+        <section class="coffe-maker link-block" id="wmf-9000s">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -673,7 +682,7 @@
             </div>
         </section>
 
-        <section class="coffe-maker blue">
+        <section class="coffe-maker blue wmf-espresso link-block" id="wmf-espresso">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -899,7 +908,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact link-block" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
