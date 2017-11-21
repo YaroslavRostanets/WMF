@@ -7,6 +7,18 @@ header {
   position: relative;
   z-index: 9;
   transition: all 0.2s ease;
+  .dropdown-menu {
+    min-width: 0;
+    padding: 0;
+  }
+  .dropdown-menu>li>a {
+    height: 29px;
+    width: auto;
+    padding: 3px 15px;
+    &:hover {
+      height: 28px;
+    }
+  }
   &.pre-fixed {
     position: fixed;
     top: -100px;
@@ -72,7 +84,7 @@ header {
     display: inline-block;
     margin-right: 3px;
     position: relative;
-    top: -2px;
+    top: 0;
     img {
       width: 100%;
       height: 100%;
@@ -109,6 +121,23 @@ header {
       font-size: 18px;
       text-transform: uppercase;
       color: #447695;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: transparent;
+        transition: all 0.4s ease;
+      }
+      &.active {
+        &:after {
+          background: transparent;
+          background: #EEBD6B;
+        }
+      }
     }
   }
   .menu-cont {

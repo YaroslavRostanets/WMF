@@ -193,6 +193,31 @@ $(document).ready(function () {
         $(".menu-cont-wrap").fadeOut();
     });
 
+    /*--Go To Top --*/
+    (function( $ ) {
+        $.fn.goToTop = function() {
+            var _this = $(this);
+            $(document).scroll(function(){
+                var windowHeigh = $(window).height();
+                var contTop = window.pageYOffset ? window.pageYOffset : document.body.scrollTop;
+                if (windowHeigh > contTop){
+                    _this.fadeOut();
+                } else {
+                    _this.fadeIn();
+                }
+            });
+            $(this).click(function(){
+                var scroll_pos=(0);
+                $('html, body').animate({scrollTop:(scroll_pos)}, '2000');
+            });
+        };
+    })(jQuery);
+
+    $('.go-to-top').goToTop();
+    /*--Конец Go To Top --*/
+
+    $("a.fancyimage").fancybox();
+
     (function(){
         var replaceURL = {
             "wmf-1100s":"wmf-1100s",
@@ -200,7 +225,7 @@ $(document).ready(function () {
             "wmf-5000s":"wmf-5000s",
             "wmf-9000s":"wmf-9000s",
             "wmf-espresso":"wmf-espresso",
-            "contact":"contact"
+            "contact":"contact34"
         };
 
         var blocks = $(".link-block");
@@ -211,14 +236,18 @@ $(document).ready(function () {
                 var min = $(window).scrollTop();
                 var max = $(window).scrollTop() + $(window).height();
                 if( elTop > min && elTop < max ){
-                    console.log($(this).attr("id"));
-                    history.pushState({foo: 'bar'}, 'Title', "/"+$(this).attr("id"));
-                    //$(item).css({"background":"red"});
+                    var idEl = '#' + $(this).attr("id");
+                    var link = replaceURL[ $(this).attr("id") ];
+                    var el = $('[href*="' + idEl + '"]');
+                    el.siblings().removeClass("active");
+                    el.addClass("active");
+                    history.pushState({foo: 'bar'}, 'Title', "/"+link );
                 }
             });
         });
+    })();
 
-
+    (function(){
 
     })();
 
