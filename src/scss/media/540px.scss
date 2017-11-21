@@ -89,6 +89,7 @@
   .photos-cont {
     .img-cont {
       margin: 10px;
+      width: 100%;
     }
   }
   .optional-equipment {
@@ -157,6 +158,9 @@
     .go-to-home {
       font-size: 19px;
     }
+  }
+  .go-to-top {
+    right: 10px;
   }
   footer {
     .social {
