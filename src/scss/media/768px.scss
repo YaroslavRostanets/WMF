@@ -16,7 +16,7 @@
       height: 50px;
     }
     .menu-cont {
-      width: 300px;
+      width: 280px;
       position: fixed;
       height: 100vh;
       background: #FFFFFF;
@@ -181,6 +181,27 @@
       .fa {
         font-size: 37px;
       }
+    }
+  }
+  .page-404 {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    h3 {
+      font-size: 24px;
+      width: 300px;
+      margin: 0 auto 23px auto;
+    }
+    h5 {
+      margin: 0 auto 30px auto;
+      font-size: 20px;
+    }
+    .page-img {
+      margin-bottom: 35px;
+    }
+    .go-to-home {
+      height: 50px;
+      width: 250px;
+      font-size: 23px;
     }
   }
 }

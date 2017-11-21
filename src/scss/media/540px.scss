@@ -144,4 +144,27 @@
   .js-feedback-open {
     right: 10px;
   }
+  .page-404 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h3 {
+      font-size: 19px;
+      width: 100%;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    .go-to-home {
+      font-size: 19px;
+    }
+  }
+  footer {
+    .social {
+      height: 100px;
+      a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 }
