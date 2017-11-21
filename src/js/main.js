@@ -1,3 +1,15 @@
+var replaceURL = {
+    "wmf-1100s":"wmf-1100s",
+    "wmf-1500s":"wmf-1500s",
+    "wmf-5000s":"wmf-5000s",
+    "wmf-9000s":"wmf-9000s",
+    "wmf-espresso":"wmf-espresso",
+    "contact":"contact34"
+};
+
+
+
+
 $(document).ready(function () {
     var menuState = false;
     /*--Определение двайса--*/
@@ -115,9 +127,9 @@ $(document).ready(function () {
     });
 
     $(".one-eq .more").click(function(){
-       var parent = $(this).closest(".one-eq");
+        var parent = $(this).closest(".one-eq");
         parent.addClass("active");
-       parent.find(".active-text").fadeIn();
+        parent.find(".active-text").fadeIn();
     });
 
     $(".one-eq .hider").click(function(){
@@ -186,7 +198,7 @@ $(document).ready(function () {
     });
 
     $(".menu-btn").click(function(){
-       $(".menu-cont-wrap").fadeIn();
+        $(".menu-cont-wrap").fadeIn();
     });
 
     $(".js-close-menu").click(function(){
@@ -219,14 +231,14 @@ $(document).ready(function () {
     $("a.fancyimage").fancybox();
 
     (function(){
-        var replaceURL = {
-            "wmf-1100s":"wmf-1100s",
-            "wmf-1500s":"wmf-1500s",
-            "wmf-5000s":"wmf-5000s",
-            "wmf-9000s":"wmf-9000s",
-            "wmf-espresso":"wmf-espresso",
-            "contact":"contact34"
-        };
+        var pathname = window.location.pathname.replace("/", "");
+        for (var key in replaceURL){
+            if (pathname == replaceURL[key]){
+                var top = $('#' + key).offset().top;
+                console.log(top);
+                $("html,body").animate({"scrollTop":top - 100},0);
+            }
+        }
 
         var blocks = $(".link-block");
 
@@ -245,10 +257,8 @@ $(document).ready(function () {
                 }
             });
         });
-    })();
-
-    (function(){
 
     })();
+
 
 });
