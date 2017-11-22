@@ -166,7 +166,7 @@ $(document).ready(function () {
 
     });
 
-    $(".js-feedback-open .submit").click(function () {
+    $(".feedback-open-wrap .submit").click(function () {
         $(".feedback-modal").fadeOut();
         $(".thanks-modal").fadeIn();
 

@@ -561,13 +561,15 @@ main {
     }
   }
 }
+.feedback-open-wrap {
+  position: fixed;
+  top: 120px;
+  right: 40px;
+}
 .js-feedback-open {
   background: #04082E;
   width: 89px;
   height: 89px;
-  position: fixed;
-  top: 120px;
-  right: 40px;
   border-radius: 45px;
   display: flex;
   justify-content: center;
