@@ -125,6 +125,17 @@ main {
   &.blue {
     background: #EEFAFC;
   }
+  .more-photos {
+    color: #eebd6b;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+    .fa {
+      color: #00427B;
+    }
+  }
   .img-cont {
     width: 470px;
     min-width: 470px;
