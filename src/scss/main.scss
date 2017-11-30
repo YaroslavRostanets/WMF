@@ -771,13 +771,20 @@ footer {
       background: #FFC06D;
       border: 2px solid #FFC06D;
       transition: all 0.2s ease-out;
+      img {
+        display: block;
+        max-height: 65%;
+        max-width: 65%;
+      }
       &:last-child {
         margin-right: 0;
       }
+      /*
       &:hover {
         background: transparent;
         color: #FFC06D;
       }
+      */
     }
   }
 }
