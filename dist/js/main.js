@@ -1,14 +1,3 @@
-var replaceURL = {
-    "wmf-1100s":"wmf-1100s",
-    "wmf-1500s":"wmf-1500s",
-    "wmf-5000s":"wmf-5000s",
-    "wmf-9000s":"wmf-9000s",
-    "wmf-espresso":"wmf-espresso",
-    "contact":"contact34"
-};
-
-
-
 
 $(document).ready(function () {
     var menuState = false;
@@ -72,17 +61,14 @@ $(document).ready(function () {
 
     function runMobile(){
 
-        console.log(state.device);
     }
 
     function runTablet(){
 
-        console.log(state.device);
     }
 
     function runDesctop(){
 
-        console.log(state.device);
     }
 
     $(window).getDevice(768,992);

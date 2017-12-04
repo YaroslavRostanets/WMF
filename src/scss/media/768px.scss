@@ -126,6 +126,9 @@
       height: 55px;
       font-size: 21px;
     }
+    .one-char.active .char-list {
+      display: none;
+    }
     .char-list {
       padding: 5px 0;
     }
