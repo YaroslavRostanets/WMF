@@ -613,9 +613,29 @@ input::-webkit-input-placeholder {
   font-size: 14px;
   font-weight: 400;
 }
+.callback-form {
+  .help-block {
+    font-size: 11px;
+  }
+  button[type="submit"] {
+    background: #04082E;
+    font-size: 14px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #eebd6b;
+    height: 26px;
+    width: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+}
 .thanks-modal, .feedback-modal {
   width: 285px;
-  height: 175px;
+  height: auto;
   background: #FFFFFF;
   padding: 15px 15px 22px 15px;
   position: absolute;
@@ -638,6 +658,9 @@ input::-webkit-input-placeholder {
     font-family: "Open Sans";
     font-weight: 300;
   }
+  .form-control {
+    box-shadow: none;
+  }
   .form-group {
     margin-bottom: 24px;
   }
@@ -647,6 +670,8 @@ input::-webkit-input-placeholder {
     display: block;
     width: 100%;
     height: 30px;
+    box-shadow: none;
+    border-radius: 0;
     &:-moz-placeholder,
     &::-webkit-input-placeholder {
       color: #04082e;
@@ -659,6 +684,9 @@ input::-webkit-input-placeholder {
       font-size: 14px;
       font-weight: 400;
       font-family: "Open Sans";
+    }
+    &:focus,&:active {
+      box-shadow: none;
     }
   }
   .submit {
