@@ -246,5 +246,9 @@ $(document).ready(function () {
 
     })();
 
+    $("nav a").on("click",function(e){
+        console.log("l");
+        e.preventDefault();
+    });
 
 });
