@@ -214,7 +214,12 @@ $(document).ready(function () {
     $('.go-to-top').goToTop();
     /*--Конец Go To Top --*/
 
-    $("a.fancyimage").fancybox();
+    $("a.fancyimage").fancybox({
+        afterShow: function(){
+            var text = $(this.element).find(".this-text").clone();
+            $(".fancybox-inner").append(text);
+        }
+    });
 
     (function(){
         var pathname = window.location.pathname.replace("/", "");
