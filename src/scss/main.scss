@@ -418,6 +418,11 @@ main {
       color: #efbf71;
     }
   }
+  .list {
+    .col-md-4 {
+      margin-bottom: 25px;
+    }
+  }
   .one-eq {
     box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.4);
     &.active {
@@ -811,14 +816,14 @@ footer {
       justify-content: center;
       color: #04082E;
       font-size: 30px;
-      border-radius: 35px;
-      background: #FFC06D;
-      border: 2px solid #FFC06D;
+      //border-radius: 35px;
+      //background: #FFC06D;
+      //border: 2px solid #FFC06D;
       transition: all 0.2s ease-out;
       img {
         display: block;
-        max-height: 65%;
-        max-width: 65%;
+        max-height: 100%;
+        max-width: 100%;
       }
       &:last-child {
         margin-right: 0;
