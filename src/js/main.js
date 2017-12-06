@@ -246,9 +246,11 @@ $(document).ready(function () {
 
     })();
 
-    $("nav a").on("click",function(e){
-        console.log("l");
+    $("nav > a").on("click",function(e){
         e.preventDefault();
+        var href = $(this).attr("href");
+        var top = $(href).offset().top;
+        $("html,body").animate({"scrollTop":top - 100},0);
     });
 
 });

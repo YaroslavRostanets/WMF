@@ -221,6 +221,7 @@ $(document).ready(function () {
         for (var key in replaceURL){
             if (pathname == replaceURL[key]){
                 var top = $('#' + key).offset().top;
+                console.log(top);
                 $("html,body").animate({"scrollTop":top - 100},0);
             }
         }
