@@ -222,14 +222,16 @@ $(document).ready(function () {
     });
 
     (function(){
-        var pathname = window.location.pathname.replace("/", "");
-        for (var key in replaceURL){
-            if (pathname == replaceURL[key]){
-                var top = $('#' + key).offset().top;
-                console.log(top);
-                $("html,body").animate({"scrollTop":top - 100},0);
+        window.onload = function () {
+            var pathname = window.location.pathname.replace("/", "");
+            for (var key in replaceURL){
+                if (pathname == replaceURL[key]){
+                    var top = $('#' + key).offset().top;
+                    console.log(top);
+                    $("html,body").animate({"scrollTop":top - 100},0);
+                }
             }
-        }
+        };
 
         var blocks = $(".link-block");
 
