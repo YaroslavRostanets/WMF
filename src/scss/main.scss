@@ -185,6 +185,9 @@ main {
       .char-list {
         display: block;
       }
+      .char-contain {
+        display: block;
+      }
     }
   }
   .char-cont {
@@ -193,6 +196,7 @@ main {
   .char-contain {
     max-height: 630px;
     overflow-y: auto;
+    display: none;
   }
   .char-list {
     list-style: none;
