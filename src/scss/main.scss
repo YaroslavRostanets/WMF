@@ -122,6 +122,20 @@ main {
 .coffe-maker {
   padding-top: 44px;
   padding-bottom: 63px;
+  table {
+    border: none;
+    tr {
+      background: #FFFFFF;
+      &:nth-child(even){
+        background: #EFBF71;
+      }
+    }
+    td {
+      padding: 5px;
+      vertical-align: middle;
+      border: none;
+    }
+  }
   &.blue {
     background: #EEFAFC;
   }
@@ -175,6 +189,10 @@ main {
   }
   .char-cont {
     max-width: 630px;
+  }
+  .char-contain {
+    max-height: 630px;
+    overflow-y: auto;
   }
   .char-list {
     list-style: none;
@@ -523,7 +541,8 @@ main {
   }
 }
 .contact {
-  height: 558px;
+  //height: 558px;
+  height: auto;
   background-image: url("../img/contact-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -531,6 +550,7 @@ main {
   font-size: 36px;
   color: #FFFFFF;
   padding-top: 70px;
+  padding-bottom: 70px;
   h3 {
     color: #efbf71;
     font-weight: 500;

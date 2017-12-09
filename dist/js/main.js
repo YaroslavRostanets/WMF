@@ -78,7 +78,9 @@ $(document).ready(function () {
         slidesToScroll: 1,
         infinite: false,
         dots: true,
-        arrows: false
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 15000
     });
 
     $(".one-char:not(.active)").find(".char-list").slideUp(5);
@@ -88,8 +90,10 @@ $(document).ready(function () {
         sib.removeClass("active");
         sib.find(".js-btn-char").removeClass("active");
         sib.find(".char-list").slideUp();
+        sib.find(".char-contain").slideUp();
 
         parent.find(".char-list").slideDown();
+        parent.find(".char-contain").slideDown();
         parent.addClass("active");
         $(this).addClass("active");
     });
