@@ -22,8 +22,12 @@ $(document).ready(function () {
                 state._preWindowWidth = $(window).width();
                 return true;
             }
-        }
+        },
+        _selectedLang: ""
     };
+
+    state._selectedLang = $(".menu-cont-wrap .dropdown .dropdown-toggle").text().trim();
+    console.log(state._selectedLang);
 
     (function( $ ) {
         $.fn.getDevice = function(braikPointMob,braikPointTablet) {
@@ -231,7 +235,6 @@ $(document).ready(function () {
             for (var key in replaceURL){
                 if (pathname == replaceURL[key]){
                     var top = $('#' + key).offset().top;
-                    console.log(top);
                     $("html,body").animate({"scrollTop":top - 100},0);
                 }
             }
