@@ -26,8 +26,22 @@ $(document).ready(function () {
         _selectedLang: ""
     };
 
-    state._selectedLang = $(".menu-cont-wrap .dropdown .dropdown-toggle").text().trim();
-    console.log(state._selectedLang);
+    state._selectedLang = $(".menu-cont-wrap .dropdown .dropdown-toggle").text().trim().toLowerCase();
+    var language;
+
+    switch(state._selectedLang) {
+        case 'en':
+            language = "/" + state._selectedLang;
+            break;
+
+        case 'ua':
+            language = "/" + state._selectedLang;
+            break;
+
+        default:
+            language = "";
+            break;
+    }
 
     (function( $ ) {
         $.fn.getDevice = function(braikPointMob,braikPointTablet) {
@@ -232,6 +246,8 @@ $(document).ready(function () {
     (function(){
         window.onload = function () {
             var pathname = window.location.pathname.replace("/", "");
+            pathname = pathname.split("/");
+            pathname = pathname[pathname.length - 1];
             for (var key in replaceURL){
                 if (pathname == replaceURL[key]){
                     var top = $('#' + key).offset().top;
@@ -253,7 +269,7 @@ $(document).ready(function () {
                     var el = $('[href*="' + idEl + '"]');
                     el.siblings().removeClass("active");
                     el.addClass("active");
-                    history.pushState({foo: 'bar'}, 'Title', "/"+link );
+                    history.pushState({foo: 'bar'}, 'Title', language + "/"+link );
                 }
             });
         });
