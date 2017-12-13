@@ -1,4 +1,5 @@
-
+var EN = 'en';
+var UK = 'uk';
 $(document).ready(function () {
     var menuState = false;
     /*--Определение двайса--*/
@@ -30,12 +31,12 @@ $(document).ready(function () {
     var language;
 
     switch(state._selectedLang) {
-        case 'en':
-            language = "/" + state._selectedLang;
+        case EN:
+            language = "/" + "en";
             break;
 
-        case 'ua':
-            language = "/" + state._selectedLang;
+        case UK:
+            language = "/" + "ua";
             break;
 
         default:
