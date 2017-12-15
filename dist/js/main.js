@@ -99,7 +99,7 @@ $(document).ready(function () {
         dots: true,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 15000
+        autoplaySpeed: 8000
     });
 
     $(".one-char:not(.active)").find(".char-list").slideUp(5);
@@ -271,6 +271,7 @@ $(document).ready(function () {
                     el.siblings().removeClass("active");
                     el.addClass("active");
                     history.pushState({foo: 'bar'}, 'Title', language + "/"+link );
+                    return false;
                 }
             });
         });
